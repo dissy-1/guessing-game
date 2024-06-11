@@ -5,7 +5,6 @@ import random
 
 def guessnumb():
     num = random.randrange(0, 100)
-    print(num)
     fehler = True
     highscore = 0
     while fehler:       # while not fehler: // while fehler =! True:
