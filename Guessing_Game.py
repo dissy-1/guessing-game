@@ -2,6 +2,8 @@
 
 import random
 
+with open('score.txt', 'r') as f:
+    print(f"Ihr derzeitiger Highscore ist: {f.read()}")
 
 
 #asdf
@@ -33,13 +35,21 @@ def guessnumb():
             print("zahl zu klein")
     return highscore
 
-#highscore = str(guessnumb())
-
 def save_score(highscore):
     #speichert den highscore in einer datei ab
     #todo: implementieren sie diese funktion
     with open('score.txt', 'w') as f:
         f.write(str(highscore))
+
+#trying to read highscore and check if it got beaten and only save then !!Work in Progress!!
+
+#with open('score.txt', 'r') as f:
+#    highscore = guessnumb()
+#    print(f"Ihr derzeitiger Highscore ist: {f.read()}")
+#    if highscore < f.read():
+#        save_score(highscore)
+#    else:
+#        pass
 
 
 
@@ -60,7 +70,6 @@ while True:
             exit(0)
         else:
             print("falsch eingabe")
-
 
 
 
